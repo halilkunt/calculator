@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+div{
+    background-color: white;
+}
+
+/* ------------ main -----------*/
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ------------ calculator div and screen -----------*/
+.calculator{
+    width: 400px;
+    border: 20px solid gray;
+}
+
+.calculator-screen{
+    height: 120px;
+    background-color: hsl(208, 100%, 87%);
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.process{
+    font-size: 3.2rem;
+    padding-right: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+/*--------------- calculator buttons ---------*/
+
+.calculator-buttons-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    height: 400px;
+    padding: 5px;
+    background-color: hsl(0, 0%, 20%);
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-size: 1.2rem;
+}
+
+a:hover{
+    transform: scale(1.07, 1.1);
+}
+
+a[data-value = "0"]{
+    grid-column: 1/3;
+}
+
+/*------------ button Colors ---------*/
+
+.expression{
+    background-color: dodgerblue;
+}
+
+.number{
+    background-color: #217C7E;
+}
+
+.operator{
+    background-color: #FF8F1F;
+}
